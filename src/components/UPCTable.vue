@@ -54,8 +54,7 @@ export default {
             method: "get",
             url: "https://luxb.news-mts.ru/api/v1/tables/companies/" + this.$route.params.companyId + '/doors/' + this.$route.params.doorId + '/upc/' + resp.data.UPCs[i].id,
             headers: {
-              'X-Token' :'ba8c2a64576b4f0fb2cd206f959dabd9'
-               // this.$cookie.get('token')
+               this.$cookie.get('token')
             }
         })
         .then((resp)=>{
